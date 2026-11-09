@@ -249,6 +249,11 @@ button { font: inherit; color: inherit; }
 .offer-copy h3 { font-size: clamp(1.6rem, 2.8vw, 2.3rem); color: var(--on-dark); }
 .offer-copy p:not(.kicker) { color: var(--on-dark-muted); max-width: 52ch; }
 .offer-copy strong { color: var(--on-dark); font-weight: 600; }
+.offer-tiers { display: flex; flex-wrap: wrap; gap: .5rem; }
+.offer-tiers li { display: inline-flex; align-items: center; gap: .6rem; padding: .4rem 1rem .4rem .4rem; border-radius: 999px; border: 1.5px solid rgba(238, 243, 236, .28); font-weight: 600; font-size: .95rem; line-height: 1.2; color: var(--on-dark); }
+.offer-tiers b { padding: .38rem .7rem; border-radius: 999px; background: rgba(238, 243, 236, .14); font: 800 1rem/1 var(--font-display); letter-spacing: -.02em; }
+.offer-tiers .is-full { border-color: var(--accent); }
+.offer-tiers .is-full b { background: var(--accent); color: var(--ink); }
 
 /* ---------- Leistungen (Bento) ---------- */
 .bento { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: clamp(14px, 1.6vw, 22px); }

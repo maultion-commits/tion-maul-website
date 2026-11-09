@@ -141,8 +141,9 @@
     };
   };
 
-  // Startangebot (100 % Rabatt): gilt für alle Leistungen außer diesen beiden
+  // Startangebot: 100 % auf die Homepage, 50 % auf alle anderen Leistungen – außer diesen beiden
   const OFFER_EXCLUDED = ['Hosting im Abo', 'Flyer & Druck'];
+  const OFFER_FULL = ['Klassische Homepage'];
 
   const buildMessage = (d) => {
     const lines = ['Guten Tag,', ''];
@@ -150,8 +151,14 @@
       lines.push('ich interessiere mich für folgende Leistungen:');
       d.services.forEach((s) => lines.push('- ' + s));
       lines.push('');
-      if (d.services.some((s) => !OFFER_EXCLUDED.includes(s))) {
-        lines.push('Ich möchte das Startangebot nutzen (100 % Rabatt, ausgenommen Hosting im Abo und Flyer & Druck).', '');
+      const eligible = d.services.filter((s) => !OFFER_EXCLUDED.includes(s));
+      if (eligible.length) {
+        const full = eligible.filter((s) => OFFER_FULL.includes(s));
+        const half = eligible.filter((s) => !OFFER_FULL.includes(s));
+        const parts = [];
+        if (full.length) parts.push('100 % Rabatt auf ' + full.join(', '));
+        if (half.length) parts.push('50 % Rabatt auf ' + half.join(', '));
+        lines.push('Ich möchte das Startangebot nutzen (' + parts.join('; ') + ').', '');
       }
     }
     if (d.timing) { lines.push('Zeitrahmen: ' + d.timing, ''); }

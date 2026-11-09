@@ -29,7 +29,7 @@ Dann `http://localhost:8815` öffnen.
 ## Anpassen
 
 - **Name / Marke:** „Tion Maul · Webdesign“ steht im Header, Footer, `<title>` und im JSON-LD von `index.html` sowie in den Rechtsseiten.
-- **Startangebot (100 % Rabatt auf alle Leistungen außer Hosting im Abo und Flyer & Druck):** Texte stehen in `index.html` an mehreren Stellen (Banner `.offer-banner` und Sticker `.offer-sticker` im Hero, Karte `#startangebot` über den Leistungen, Zeile `.form-offer` im Formular, FAQ „Was kostet eine Website?“) und in `assets/main.js` (`OFFER_EXCLUDED`, Zeile in der E-Mail-Vorlage). Zum Ändern oder Beenden überall suchen nach „Startangebot“.
+- **Startangebot (100 % Rabatt auf die klassische Homepage, 50 % auf alle anderen Leistungen, ausgenommen Hosting im Abo und Flyer & Druck):** Texte stehen in `index.html` an mehreren Stellen (Banner `.offer-banner` und Sticker `.offer-sticker` im Hero, Karte `#startangebot` mit `.offer-tiers` über den Leistungen, Zeile `.form-offer` im Formular, FAQ „Was kostet eine Website?“) und in `assets/main.js` (`OFFER_FULL`, `OFFER_EXCLUDED`, Zeile in der E-Mail-Vorlage). Zum Ändern oder Beenden überall suchen nach „Startangebot“.
 - **Referenz hinzufügen:** In `index.html` einen `<article class="case">` im Abschnitt „Referenzen“ kopieren, Bild nach `assets/img/` legen.
 - **Neues Vorschaubild:** Screenshot mit 1440 × 900 aufnehmen, auf 1200 × 750 skalieren, als WebP speichern.
 - **Domain:** Sobald sie feststeht, einmal ausführen (Node.js genügt):
