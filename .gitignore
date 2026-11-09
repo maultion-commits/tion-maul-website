@@ -1,0 +1,10 @@
+# Betriebssystem und Editor
+Thumbs.db
+.DS_Store
+desktop.ini
+*.log
+
+# Abhängigkeiten und lokale Ausgaben
+node_modules/
+_shots/
+.netlify/

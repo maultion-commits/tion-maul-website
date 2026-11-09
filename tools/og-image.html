@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Link-Vorschaubild</title>
+<!-- Vorlage für assets/og-image.jpg (1200 × 630). Rendern: siehe tools/README.md -->
+<style>
+  @font-face { font-family: "Bricolage Grotesque"; src: url("../assets/fonts/bricolage-grotesque-latin-wght-normal.woff2") format("woff2"); font-weight: 200 800; }
+  @font-face { font-family: "Instrument Sans"; src: url("../assets/fonts/instrument-sans-latin-wght-normal.woff2") format("woff2"); font-weight: 400 700; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body { position: relative; background: #F4F1EA; color: #0E1512; font-family: "Instrument Sans", sans-serif; -webkit-font-smoothing: antialiased; }
+  .blob { position: absolute; border-radius: 50%; pointer-events: none; }
+  .b1 { width: 760px; height: 760px; right: -200px; top: -260px; background: radial-gradient(closest-side, rgba(255,90,43,.22), rgba(255,90,43,0) 70%); }
+  .b2 { width: 640px; height: 640px; left: -220px; bottom: -300px; background: radial-gradient(closest-side, rgba(207,227,212,.95), rgba(207,227,212,0) 70%); }
+
+  .copy { position: absolute; left: 64px; top: 54px; bottom: 54px; width: 610px; display: flex; flex-direction: column; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand svg { width: 60px; height: 60px; }
+  .brand strong { display: block; font: 700 30px/1.05 "Bricolage Grotesque"; letter-spacing: -.02em; }
+  .brand small { display: block; margin-top: 4px; font: 600 15px/1 "Instrument Sans"; letter-spacing: .15em; text-transform: uppercase; color: #56625B; }
+  h1 { margin-top: auto; font: 750 72px/1 "Bricolage Grotesque"; letter-spacing: -.045em; text-wrap: balance; }
+  .hl { position: relative; display: inline-block; z-index: 0; }
+  .hl::after { content: ""; position: absolute; z-index: -1; left: -.05em; right: -.05em; bottom: .05em; height: .36em; background: #FF5A2B; border-radius: .12em; }
+  .pills { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .pills span { padding: 9px 17px; border-radius: 999px; border: 1.5px solid rgba(14,21,18,.26); background: rgba(255,255,255,.55); font: 600 19px/1 "Instrument Sans"; }
+  .where { margin-top: 22px; display: flex; align-items: center; gap: 12px; font: 600 17px/1 "Instrument Sans"; letter-spacing: .1em; text-transform: uppercase; color: #56625B; }
+  .where i { width: 10px; height: 10px; border-radius: 50%; background: #FF5A2B; }
+
+  .frame { position: absolute; margin: 0; background: #fff; border: 1px solid rgba(14,21,18,.14); border-radius: 18px; overflow: hidden; box-shadow: 0 2px 4px rgba(15,43,35,.08), 0 40px 70px -30px rgba(15,43,35,.55); }
+  .bar { display: flex; align-items: center; gap: 7px; padding: 12px 15px; background: #EFEBE2; border-bottom: 1px solid rgba(14,21,18,.12); }
+  .bar i { width: 11px; height: 11px; border-radius: 50%; background: #D3CDBE; }
+  .bar i:first-child { background: #F08A6B; }
+  .frame img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+  .back { left: 742px; top: 56px; width: 520px; transform: rotate(4deg); }
+  .front { left: 700px; top: 268px; width: 560px; transform: rotate(-3deg); }
+</style>
+</head>
+<body>
+  <div class="blob b1"></div><div class="blob b2"></div>
+
+  <div class="copy">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0F2B23"/><path d="M10 19h16M18 19v26M30 45V19l8 14 8-14v26" fill="none" stroke="#F4F1EA" stroke-width="5" stroke-linejoin="round"/><circle cx="53" cy="44" r="4" fill="#FF5A2B"/></svg>
+      <div><strong>Tion Maul</strong><small>Webdesign</small></div>
+    </div>
+    <h1>Websites, die Ihr Unternehmen <span class="hl">sichtbar</span> machen.</h1>
+    <div class="pills"><span>Homepage</span><span>Online-Shop</span><span>Web-Apps</span><span>Flyer &amp; Druck</span><span>Google-Eintrag</span><span>Hosting</span></div>
+    <div class="where"><i></i>Webdesign aus Stadtroda</div>
+  </div>
+
+  <figure class="frame back"><div class="bar"><i></i><i></i><i></i></div><img src="../assets/img/ref-fas.webp" alt=""></figure>
+  <figure class="frame front"><div class="bar"><i></i><i></i><i></i></div><img src="../assets/img/ref-gnz.webp" alt=""></figure>
+</body>
+</html>
