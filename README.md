@@ -47,7 +47,11 @@ Dann `http://localhost:8815` öffnen.
 
   Das PNG danach als JPEG (Qualität ca. 88) nach `assets/og-image.jpg` speichern.
 
-## Veröffentlichen (Netlify, wie bei den anderen Projekten)
+## Veröffentlichen
+
+**Aktuell (seit 2026-11-24):** GitHub Pages aus dem öffentlichen Repo, Branch `main`, Ordner `/` → https://maultion-commits.github.io/tion-maul-website/ . Jeder Push nach `main` baut die Seite neu. `404.html` nutzt `<base href="/tion-maul-website/">`; bei einer eigenen Domain (Wurzel) diese Zeile entfernen und `node tools/set-domain.mjs https://<domain>` ausführen. Die Datei `_headers` gilt nur bei Netlify.
+
+### Alternative: Netlify (wie bei den anderen Projekten)
 
 ```bash
 npx --yes netlify-cli sites:create --name <subdomain> --disable-linking
