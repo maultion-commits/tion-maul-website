@@ -273,6 +273,16 @@ button { font: inherit; color: inherit; }
 .svc-cta { display: inline-flex; align-items: center; gap: .5rem; margin-top: auto; padding: 0; border: 0; background: none; cursor: pointer; font-weight: 600; font-size: .95rem; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; transition: gap .3s var(--ease), color .2s; }
 .svc-main .svc-cta { margin-top: .5rem; }
 .svc-cta:hover { gap: .85rem; }
+.svc-price { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .7rem; margin: -.15rem 0 0; }
+.svc-price b { padding: .22rem .7rem; border-radius: 999px; background: var(--mint-2); color: var(--forest); font: 700 .95rem/1.25 var(--font-display); letter-spacing: -.01em; }
+.svc-price span { font-size: .84rem; color: var(--muted); }
+.svc.dark .svc-price b { background: rgba(255, 255, 255, .1); color: var(--accent); }
+.svc.dark .svc-price span { color: var(--on-dark-muted); }
+.svc.mint .svc-price b { background: rgba(255, 255, 255, .65); }
+.svc.mint .svc-price span { color: #3C4A42; }
+.svc.accent .svc-price b { background: rgba(14, 21, 18, .12); color: var(--ink); }
+.svc.accent .svc-price span { color: rgba(14, 21, 18, .8); }
+.price-note { margin-top: 1.5rem; max-width: 72ch; font-size: .9rem; color: var(--muted); }
 
 .svc-art { color: var(--ink); justify-self: end; align-self: end; width: 100%; max-width: 280px; margin: 0 -16px -16px 0; transition: transform .6s var(--ease); }
 .svc:hover .svc-art { transform: translateY(-6px) rotate(-1deg); }
