@@ -6,6 +6,7 @@
  *
  * Aufruf (im Projektordner):
  *   node tools/set-domain.mjs https://tionmaul.de
+ *   oder für GitHub Pages: node tools/set-domain.mjs https://maultion-commits.github.io/tion-maul-website
  *
  * Das Skript kann beliebig oft laufen: es ersetzt nur den Bereich zwischen
  * <!-- domain:start --> und <!-- domain:end --> in index.html.
@@ -24,8 +25,9 @@ try {
   fail('Bitte eine vollständige Adresse angeben, zum Beispiel: node tools/set-domain.mjs https://tionmaul.de');
 }
 if (url.protocol !== 'https:') fail('Die Adresse muss mit https:// beginnen.');
-if (url.pathname !== '/' || url.search || url.hash) fail('Bitte nur die Domain ohne Pfad angeben (https://beispiel.de).');
-const origin = url.origin;
+if (url.search || url.hash) fail('Bitte ohne Suchteil und Anker angeben.');
+// Ein Pfad ist nur für GitHub-Pages-Projektseiten nötig (https://name.github.io/projekt); bei einer eigenen Domain bleibt er leer.
+const origin = url.origin + url.pathname.replace(/\/+$/, '');
 
 const title = 'Tion Maul – Webdesign aus Stadtroda';
 const alt = 'Tion Maul – Webdesign: Websites, die Ihr Unternehmen sichtbar machen, mit Vorschau auf zwei Referenzprojekte';
